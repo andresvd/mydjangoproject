@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app>
 {% load staticfiles %}
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/myapp.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 </head>
 <body>
+<input type="text" ng-model="nome">
+        <p>Olá, Tableless! Meu nome é: {{ nome }}</p>
 <div class="add-list">
             <a href="{% url 'myapp.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h1><a href="/">+</a></h1>
